@@ -10,15 +10,15 @@ var maxProfit = function(prices) {
         
 //     }
     
-    let minPrice = Infinity
+    let minPrice = prices[0]
     let maxProfit = 0
     
-    for (let price of prices){
-        if(price < minPrice){
-            minPrice = price;
+    for (let i = 1; i< prices.length; i++){
+        if(prices[i] < minPrice){
+            minPrice = prices[i];
         }
         else{
-            maxProfit = Math.max(maxProfit, price - minPrice)
+            maxProfit = Math.max(maxProfit, prices[i] - minPrice)
             
         }
         
