@@ -5,6 +5,9 @@
  * @return {number}
  */
 var maxCount = function(m, n, ops) {
+      if (ops.length === 0) {
+        return m * n;
+    }
     let min_row = m
     let min_col = n
     
